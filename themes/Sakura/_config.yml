@@ -65,7 +65,7 @@ startdash:
 
 
 # your site build time or founded date
-siteBuildingTime: 07/17/2018
+siteBuildingTime: 06/07/2020
 
 #social  url, img PC端配置
 social:
@@ -89,7 +89,7 @@ donate:
 movies:
   url: https://www.kami11.ml/
   # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
-  name: Unbroken.mp4
+  name: 
 
 aplayer: 
   id: 406400501
