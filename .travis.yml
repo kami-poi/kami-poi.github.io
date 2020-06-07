@@ -6,8 +6,17 @@ cache: npm
 branches:
   only:
     - source # build master branch only
+# cache this directory
+cache:
+  directories:
+    - node_modules
+    #- themes 主题没有更改时可以缓存
+# S: Build Lifecycle
+before_install:
+  - npm install -g hexo-cli # 安装 hexo
+install:
+  - npm install # 安装 package.json 中的插件
 script:
-  - npm install hexo-deployer-git --save
   - hexo generate # generate static files
 after_success:
   - git config --global user.name "deploy"

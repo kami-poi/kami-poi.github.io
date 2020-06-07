@@ -80,18 +80,16 @@ theme: Sakura
 deploy:
   type: git
   repo: 
-    github: https://github.com/kami-poi/kami-poi.github.io.git
+    github: https://gh_token@github.com/kami-poi/kami-poi.github.io.git
   branch: master
-  token: gh_token
 
 # backup
 backup:
   type: git
   message: backup my blog of https://kami-poi.github.io/
   repository:
-    github: https://github.com/kami-poi/kami-poi.github.io.git
+    github: https://gh_token@github.com/kami-poi/kami-poi.github.io.git
   branch: backup
-  token: gh_token
 #RSS
 feed:
   type: atom
