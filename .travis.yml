@@ -22,5 +22,8 @@ after_success:
   - git config --global user.name "deploy"
   - git config --global user.email "2214966912@qq.com"
   - sed -i "s/gh_token/${GH_TOKEN}/g" _config.yml #使用travisCI中配置的token替换掉_config.yml中对应的占位符
-  - hexo deploy
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: sh deploy.sh
 # E: Build LifeCycle
