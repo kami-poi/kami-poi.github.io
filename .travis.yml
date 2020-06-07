@@ -1,0 +1,16 @@
+sudo: false
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
+cache: npm
+branches:
+  only:
+    - source # build master branch only
+script:
+  - hexo generate # generate static files
+after_success:
+  - git config --global user.name "deploy"
+  - git config --global user.email "2214966912@qq.com"
+  - sed -i "s/gh_token/${GH_TOKEN}/g" _config.yml #使用travisCI中配置的token替换掉_config.yml中对应的占位符
+  - hexo deploy
+# E: Build LifeCycle
